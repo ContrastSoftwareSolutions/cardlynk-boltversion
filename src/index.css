@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-width: 16rem;
+}
+
+/* Layout transitions */
+.main-content {
+  margin-left: var(--sidebar-width);
+  transition: margin-left 0.3s ease;
+  width: calc(100% - var(--sidebar-width));
+}
+
+/* Table styles */
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-header-group {
+  display: table-header-group;
+}
+
+.table-row-group {
+  display: table-row-group;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Ensure content fills available space */
+.content-wrapper {
+  max-width: calc(100vw - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+}
+
+/* When sidebar is collapsed */
+[data-sidebar-collapsed="true"] .content-wrapper {
+  max-width: calc(100vw - 5rem);
+  margin-left: 5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+  .content-wrapper {
+    padding: 2rem;
+  }
+}
+
+/* Table container */
+.table-container {
+  @apply w-full overflow-x-auto;
+  min-width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Filter container */
+.filter-container {
+  @apply sticky top-0 bg-white z-20 py-4 px-6 border-b border-gray-200;
+}
