@@ -23,7 +23,7 @@ export function LandingPage() {
     },
     {
       icon: Users,
-      title: 'Contact Management',
+      title: 'Contact Managers',
       description: 'Organize and nurture your professional network effortlessly'
     },
     {
