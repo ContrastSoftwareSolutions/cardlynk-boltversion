@@ -111,7 +111,7 @@ export function AnalyticsPage({ profile, brandColor }: AnalyticsPageProps) {
         <div className="flex justify-between items-center mb-6">
           <div>
             <h1 className="text-2xl font-bold text-gray-900">Analytics</h1>
-            <p className="text-gray-600">Track your profile performance and impact</p>
+            <p className="text-gray-600">Track your profile performances and impact</p>
           </div>
           <button
             onClick={handleExportData}
